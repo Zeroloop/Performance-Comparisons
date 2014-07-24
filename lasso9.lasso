@@ -96,7 +96,7 @@ json_serialize(#j)
 
 ^}
 
-timethis('Inline - SQL Query') => {^
+timethis('MySQL Inline') => {^
     local(out) = '' 
     inline(
         -database = 'sakila', 
@@ -112,7 +112,7 @@ timethis('Inline - SQL Query') => {^
 ^}
 
 
-timethis('DS - SQL Query') => {^
+timethis('MySQL DS') => {^
     local(out) = '' 
     with row in ds(::mysqlds,'127.0.0.1',::sakila,'root','')->sql(
         'SELECT title, description, last_update FROM film LIMIT 0,100'

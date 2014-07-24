@@ -21,7 +21,7 @@ for n in range(40):
 end_time = time.time()
 
 print
-print("First 40 Fibonacci Numbers\t%g milliseconds" % ((end_time - start_time)*1000))
+print("Fibonacci Numbers\t%g milliseconds" % ((end_time - start_time)*1000))
 
 print
 print
