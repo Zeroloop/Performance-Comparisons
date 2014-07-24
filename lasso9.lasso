@@ -99,26 +99,27 @@ json_serialize(#j)
 timethis('MySQL Inline') => {^
     local(out) = '' 
     inline(
-        -database = 'sakila', 
-        -sql = 'SELECT title, description, last_update FROM film LIMIT 0,100'
+        -database = 'mysql', 
+        -sql = 'SELECT name, example, url FROM help_topic LIMIT 0,100'
     ) => {
         rows => {
             #out->append(
-              column('title')+', '+column('description')+' was updated on ' + column('last_update')
+              column('name')+', '+column('example')+' is here ' + column('url')
             )
         }
     }
     #out
 ^}
 
+// Download here: http://www.github.com/zeroloop/ds
 
 timethis('MySQL DS') => {^
     local(out) = '' 
-    with row in ds(::mysqlds,'127.0.0.1',::sakila,'root','')->sql(
-        'SELECT title, description, last_update FROM film LIMIT 0,100'
+    with row in ds(::mysqlds,'127.0.0.1',::mysql,'root','')->sql(
+        'SELECT name, example, url FROM help_topic LIMIT 0,100'
     )->rows do {
         #out->append(
-            #row(::title)+', '+#row(::description)+' was updated on ' + #row(::last_update) + '\n'
+            #row(::name)+', '+#row(::example)+' is here ' + #row(::url) + '\n'
         )
     }
     #out

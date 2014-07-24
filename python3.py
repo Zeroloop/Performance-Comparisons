@@ -59,13 +59,13 @@ start_time = time.time()
 
 cnx = mysql.connector.connect(user='root', password='',
                               host='127.0.0.1',
-                              database='sakila')
+                              database='mysql')
 cursor = cnx.cursor()
-query = ("SELECT title, description, last_update FROM film LIMIT 0,100")
+query = ("SELECT name, example, url FROM help_topic LIMIT 0,100")
 cursor.execute(query)
 
 for (title, description, last_update) in cursor:
-  print("{}, {} was updated on {}".format(
+  print("{}, {} is here {}".format(
     title, description, last_update))
 
 cursor.close()
