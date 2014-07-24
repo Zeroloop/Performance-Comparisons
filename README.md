@@ -3,7 +3,7 @@ Language Performance-Comparisons
 
 This repo exists as a method of comparing different languages web performance.
 
-All tests should run through a standard web stack, any depencies should be referenced in the test files.
+Any depencies should be referenced in the test files.
 
 Contributions welcome.
 
