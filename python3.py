@@ -73,5 +73,5 @@ cursor.close()
 cnx.close()
 
 end_time = time.time()
-print("JSON\t%g milliseconds" % ((end_time - start_time)*1000))
+print("MySQL\t%g milliseconds" % ((end_time - start_time)*1000))
 
