@@ -19,6 +19,7 @@ Fibonacci Numbers: Modern Code	0.257 milliseconds
 1,000,000: Old Code	384.401	milliseconds
 1,000,000: Modern Code	90.742	milliseconds
 1,000,000: Raw	59.165	milliseconds
+JSON: 9.722	milliseconds
 MySQL Inline: 	4.142	milliseconds
 MySQL DS:	1.861 milliseconds
 
