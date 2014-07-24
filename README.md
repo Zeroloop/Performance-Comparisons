@@ -13,7 +13,7 @@ Fibonacci Numbers	0.324965 milliseconds
 JSON	101.238 milliseconds
 MySQL	13.6859 milliseconds
 
-Lasso: /lasso8.lasso
+Lasso: /lasso9.lasso
 Fibonacci Numbers: Old Code	1.846 milliseconds
 Fibonacci Numbers: Modern Code	0.257 milliseconds
 1,000,000: Old Code	384.401	milliseconds
