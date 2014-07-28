@@ -37,7 +37,7 @@ protect => {
 			return #n1
 		}
 		// Count instances of a pattern
-		define string->count2(p::string) => {
+		define string->count(p::string) => {
 			local(i=0,offset = 0)
 			{
 				#offset =  .find(#p,#offset != 0 ? #offset + #p->size | 1 )
@@ -73,14 +73,10 @@ json_serialize(#j)
 
 ^}
 
-
-
 timethis('Count String') => {
 	'the three truths'->count('th')
 	'ababababab'->count('abab')
 }
- 
-
 
 // Using mysql.help_topic table
 
